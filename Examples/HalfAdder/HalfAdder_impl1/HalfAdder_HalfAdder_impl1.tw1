@@ -1,0 +1,101 @@
+
+Loading design for application trce from file halfadder_halfadder_impl1_map.ncd.
+Design name: HalfAdder
+NCD version: 3.3
+Vendor:      LATTICE
+Device:      LCMXO2-4000HC
+Package:     CSBGA132
+Performance: 4
+Loading device for application trce from file 'xo2c4000.nph' in environment: C:/lscc/diamond/3.12/ispfpga.
+Package Status:                     Final          Version 1.44.
+Performance Hardware Data Status:   Final          Version 34.4.
+Setup and Hold Report
+
+--------------------------------------------------------------------------------
+Lattice TRACE Report - Setup, Version Diamond (64-bit) 3.12.0.240.2
+Thu Sep 21 20:18:11 2023
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2020 Lattice Semiconductor Corporation,  All rights reserved.
+
+Report Information
+------------------
+Command line:    trce -v 1 -gt -mapchkpnt 0 -sethld -o HalfAdder_HalfAdder_impl1.tw1 -gui HalfAdder_HalfAdder_impl1_map.ncd HalfAdder_HalfAdder_impl1.prf 
+Design file:     halfadder_halfadder_impl1_map.ncd
+Preference file: halfadder_halfadder_impl1.prf
+Device,speed:    LCMXO2-4000HC,4
+Report level:    verbose report, limited to 1 item per preference
+--------------------------------------------------------------------------------
+
+BLOCK ASYNCPATHS
+BLOCK RESETPATHS
+--------------------------------------------------------------------------------
+
+
+
+================================================================================
+Preference: Default path enumeration
+            4 items scored, 0 timing errors detected.
+--------------------------------------------------------------------------------
+
+Report:    6.892ns delay A to Cout
+
+   Name    Fanout   Delay (ns)          Site               Resource
+PADI_DEL    ---     1.132         M7.PAD to       M7.PADDI A
+ROUTE         2   e 1.234       M7.PADDI to     SLICE_0.A1 A_c
+CTOF_DEL    ---     0.495     SLICE_0.A1 to     SLICE_0.F1 SLICE_0
+ROUTE         1   e 1.234     SLICE_0.F1 to      M12.PADDO Cout_c
+DOPAD_DEL   ---     2.797      M12.PADDO to        M12.PAD Cout
+                  --------
+                    6.892   (64.2% logic, 35.8% route), 3 logic levels.
+
+Report:    6.892ns is the maximum delay for this preference.
+
+
+================================================================================
+Preference: Default net enumeration
+            4 items scored, 0 timing errors detected.
+--------------------------------------------------------------------------------
+
+Report:    1.234ns maximum delay on Cout_c
+
+           Delays             Connection(s)
+         e 1.234ns       SLICE_0.F1 to M12.PADDO       
+
+Report:    1.234ns is the maximum delay for this preference.
+
+Report Summary
+--------------
+----------------------------------------------------------------------------
+Preference                              |   Constraint|       Actual|Levels
+----------------------------------------------------------------------------
+                                        |             |             |
+Default path enumeration                |     0.000 ns|     6.892 ns|   0  
+                                        |             |             |
+Default net enumeration                 |     0.000 ns|     1.234 ns|   0  
+                                        |             |             |
+----------------------------------------------------------------------------
+
+
+All preferences were met.
+
+
+Clock Domains Analysis
+------------------------
+
+Found 0 clocks:
+
+
+Timing summary (Setup):
+---------------
+
+Timing errors: 0  Score: 0
+Cumulative negative slack: 0
+
+Constraints cover 4 paths, 4 nets, and 6 connections (100.00% coverage)
+
+--------------------------------------------------------------------------------
+

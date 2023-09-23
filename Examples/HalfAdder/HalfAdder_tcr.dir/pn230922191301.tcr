@@ -1,0 +1,5 @@
+#Start recording tcl command: 9/22/2023 19:12:18
+#Project Location: C:/lscc/diamond/3.12/examples/HalfAdder; Project name: HalfAdder
+prj_project open "C:/lscc/diamond/3.12/examples/HalfAdder/HalfAdder.ldf"
+prj_project close
+#Stop recording: 9/22/2023 19:13:01

@@ -1,0 +1,5 @@
+-rem
+-distrce
+-log "HalfAdder_HalfAdder_impl1.log"
+-o "HalfAdder_HalfAdder_impl1.csv"
+-pr "HalfAdder_HalfAdder_impl1.prf"

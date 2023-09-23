@@ -1,0 +1,83 @@
+(DELAYFILE
+  (SDFVERSION "3.0")
+  (DESIGN "HalfAdder")
+  (DATE "Thu Sep 21 20:18:16 2023")
+  (VENDOR "Lattice")
+  (PROGRAM "ldbanno")
+  (VERSION "Diamond (64-bit) 3.12.0.240.2")
+  (DIVIDER /)
+  (VOLTAGE 1.26:1.20:1.14)
+  (PROCESS "default")
+  (TEMPERATURE -40:25:85)
+  (TIMESCALE 1ps)
+  (CELL
+    (CELLTYPE "SLICE_0")
+    (INSTANCE SLICE_0I)
+    (DELAY
+      (ABSOLUTE
+        (IOPATH C1 F1 (367:431:495)(367:431:495))
+        (IOPATH B1 F1 (367:431:495)(367:431:495))
+        (IOPATH C0 F0 (367:431:495)(367:431:495))
+        (IOPATH B0 F0 (367:431:495)(367:431:495))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "CoutB")
+    (INSTANCE CoutI)
+    (DELAY
+      (ABSOLUTE
+        (IOPATH PADDO CoutS (2611:2704:2797)(2611:2704:2797))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "SumB")
+    (INSTANCE SumI)
+    (DELAY
+      (ABSOLUTE
+        (IOPATH PADDO SumS (2611:2704:2797)(2611:2704:2797))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "AB")
+    (INSTANCE AI)
+    (DELAY
+      (ABSOLUTE
+        (IOPATH AS PADDI (1007:1069:1132)(1007:1069:1132))
+      )
+    )
+    (TIMINGCHECK
+      (WIDTH (posedge AS) (3330:3330:3330))
+      (WIDTH (negedge AS) (3330:3330:3330))
+    )
+  )
+  (CELL
+    (CELLTYPE "BB0")
+    (INSTANCE BI)
+    (DELAY
+      (ABSOLUTE
+        (IOPATH BS PADDI (1007:1069:1132)(1007:1069:1132))
+      )
+    )
+    (TIMINGCHECK
+      (WIDTH (posedge BS) (3330:3330:3330))
+      (WIDTH (negedge BS) (3330:3330:3330))
+    )
+  )
+  (CELL
+    (CELLTYPE "HalfAdder")
+    (INSTANCE )
+    (DELAY
+      (ABSOLUTE
+        (INTERCONNECT BI/PADDI SLICE_0I/C1 (2430:2657:2885)(2430:2657:2885))
+        (INTERCONNECT BI/PADDI SLICE_0I/C0 (2430:2657:2885)(2430:2657:2885))
+        (INTERCONNECT AI/PADDI SLICE_0I/B1 (2661:2901:3142)(2661:2901:3142))
+        (INTERCONNECT AI/PADDI SLICE_0I/B0 (2661:2901:3142)(2661:2901:3142))
+        (INTERCONNECT SLICE_0I/F0 SumI/PADDO (915:1037:1160)(915:1037:1160))
+        (INTERCONNECT SLICE_0I/F1 CoutI/PADDO (915:1037:1160)(915:1037:1160))
+      )
+    )
+  )
+)

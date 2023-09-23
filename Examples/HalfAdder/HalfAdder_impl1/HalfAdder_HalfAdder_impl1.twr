@@ -1,0 +1,151 @@
+
+Loading design for application trce from file halfadder_halfadder_impl1.ncd.
+Design name: HalfAdder
+NCD version: 3.3
+Vendor:      LATTICE
+Device:      LCMXO2-4000HC
+Package:     CSBGA132
+Performance: 4
+Loading device for application trce from file 'xo2c4000.nph' in environment: C:/lscc/diamond/3.12/ispfpga.
+Package Status:                     Final          Version 1.44.
+Performance Hardware Data Status:   Final          Version 34.4.
+Setup and Hold Report
+
+--------------------------------------------------------------------------------
+Lattice TRACE Report - Setup, Version Diamond (64-bit) 3.12.0.240.2
+Thu Sep 21 20:18:14 2023
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2020 Lattice Semiconductor Corporation,  All rights reserved.
+
+Report Information
+------------------
+Command line:    trce -v 10 -gt -sethld -sp 4 -sphld m -o HalfAdder_HalfAdder_impl1.twr -gui HalfAdder_HalfAdder_impl1.ncd HalfAdder_HalfAdder_impl1.prf 
+Design file:     halfadder_halfadder_impl1.ncd
+Preference file: halfadder_halfadder_impl1.prf
+Device,speed:    LCMXO2-4000HC,4
+Report level:    verbose report, limited to 10 items per preference
+--------------------------------------------------------------------------------
+
+BLOCK ASYNCPATHS
+BLOCK RESETPATHS
+--------------------------------------------------------------------------------
+
+
+
+================================================================================
+Preference: Default path enumeration
+            4 items scored, 0 timing errors detected.
+--------------------------------------------------------------------------------
+
+Report:    8.726ns delay A to Cout
+
+   Name    Fanout   Delay (ns)          Site               Resource
+PADI_DEL    ---     1.132         M7.PAD to       M7.PADDI A
+ROUTE         2     3.142       M7.PADDI to     R19C31A.B1 A_c
+CTOF_DEL    ---     0.495     R19C31A.B1 to     R19C31A.F1 SLICE_0
+ROUTE         1     1.160     R19C31A.F1 to      M12.PADDO Cout_c
+DOPAD_DEL   ---     2.797      M12.PADDO to        M12.PAD Cout
+                  --------
+                    8.726   (50.7% logic, 49.3% route), 3 logic levels.
+
+Report:    8.726ns delay A to Sum
+
+   Name    Fanout   Delay (ns)          Site               Resource
+PADI_DEL    ---     1.132         M7.PAD to       M7.PADDI A
+ROUTE         2     3.142       M7.PADDI to     R19C31A.B0 A_c
+CTOF_DEL    ---     0.495     R19C31A.B0 to     R19C31A.F0 SLICE_0
+ROUTE         1     1.160     R19C31A.F0 to      N13.PADDO Sum_c
+DOPAD_DEL   ---     2.797      N13.PADDO to        N13.PAD Sum
+                  --------
+                    8.726   (50.7% logic, 49.3% route), 3 logic levels.
+
+Report:    8.469ns delay B to Cout
+
+   Name    Fanout   Delay (ns)          Site               Resource
+PADI_DEL    ---     1.132         M8.PAD to       M8.PADDI B
+ROUTE         2     2.885       M8.PADDI to     R19C31A.C1 B_c
+CTOF_DEL    ---     0.495     R19C31A.C1 to     R19C31A.F1 SLICE_0
+ROUTE         1     1.160     R19C31A.F1 to      M12.PADDO Cout_c
+DOPAD_DEL   ---     2.797      M12.PADDO to        M12.PAD Cout
+                  --------
+                    8.469   (52.2% logic, 47.8% route), 3 logic levels.
+
+Report:    8.469ns delay B to Sum
+
+   Name    Fanout   Delay (ns)          Site               Resource
+PADI_DEL    ---     1.132         M8.PAD to       M8.PADDI B
+ROUTE         2     2.885       M8.PADDI to     R19C31A.C0 B_c
+CTOF_DEL    ---     0.495     R19C31A.C0 to     R19C31A.F0 SLICE_0
+ROUTE         1     1.160     R19C31A.F0 to      N13.PADDO Sum_c
+DOPAD_DEL   ---     2.797      N13.PADDO to        N13.PAD Sum
+                  --------
+                    8.469   (52.2% logic, 47.8% route), 3 logic levels.
+
+Report:    8.726ns is the maximum delay for this preference.
+
+
+================================================================================
+Preference: Default net enumeration
+            4 items scored, 0 timing errors detected.
+--------------------------------------------------------------------------------
+
+Report:    3.142ns maximum delay on A_c
+
+           Delays             Connection(s)
+           3.142ns         M7.PADDI to R19C31A.B1      
+           3.142ns         M7.PADDI to R19C31A.B0      
+
+Report:    2.885ns maximum delay on B_c
+
+           Delays             Connection(s)
+           2.885ns         M8.PADDI to R19C31A.C1      
+           2.885ns         M8.PADDI to R19C31A.C0      
+
+Report:    1.160ns maximum delay on Sum_c
+
+           Delays             Connection(s)
+           1.160ns       R19C31A.F0 to N13.PADDO       
+
+Report:    1.160ns maximum delay on Cout_c
+
+           Delays             Connection(s)
+           1.160ns       R19C31A.F1 to M12.PADDO       
+
+Report:    3.142ns is the maximum delay for this preference.
+
+Report Summary
+--------------
+----------------------------------------------------------------------------
+Preference                              |   Constraint|       Actual|Levels
+----------------------------------------------------------------------------
+                                        |             |             |
+Default path enumeration                |     0.000 ns|     8.726 ns|   0  
+                                        |             |             |
+Default net enumeration                 |     0.000 ns|     3.142 ns|   0  
+                                        |             |             |
+----------------------------------------------------------------------------
+
+
+All preferences were met.
+
+
+Clock Domains Analysis
+------------------------
+
+Found 0 clocks:
+
+
+Timing summary (Setup):
+---------------
+
+Timing errors: 0  Score: 0
+Cumulative negative slack: 0
+
+Constraints cover 4 paths, 4 nets, and 6 connections (100.00% coverage)
+
+--------------------------------------------------------------------------------
+
